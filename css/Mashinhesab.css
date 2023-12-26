@@ -295,6 +295,8 @@ button:active{
     position: absolute;
     top: 10%;
     left: 50%;
-    
     box-sizing: content-box;
+}
+#hint>p{
+    color:black;
 }
