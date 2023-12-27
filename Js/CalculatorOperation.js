@@ -43,6 +43,15 @@ at least change our displaysvalue when computation ended
     inputs = "-";
     selectedOperator.innerText = inputs;
     if (displayHasValue === true) {
+      if(prevDisplay.value===""){
+        histroySave.saveOperation();
+        prevDisplay.value=display.value
+        histroySave.saveValue();
+        display.value = null;
+        displayHasValue = false;
+        isInt = false;
+        return;
+      }
       histroySave.saveOperation();
       prevDisplay.value = Number(prevDisplay.value) - Number(display.value);
       histroySave.saveValue();
